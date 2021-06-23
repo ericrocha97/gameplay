@@ -24,6 +24,10 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0D133E"
       }
+      
+    },
+    "androidStatusBar":{
+      "barStyle": "light-content"
     }
   }
 }
