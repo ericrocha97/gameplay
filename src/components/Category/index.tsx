@@ -1,10 +1,10 @@
 import React from "react";
-import { View } from "react-native";
-
+import { View, Text } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
 import {styles} from './styles';
 
 import { RectButtonProps, RectButton } from "react-native-gesture-handler";
-import { LinearGradient, SvgProps } from "react-native-svg";
+import { SvgProps } from "react-native-svg";
 import { theme } from "../../global/styles/theme";
 
 type Props = RectButtonProps & {
@@ -24,12 +24,24 @@ export function Category({
   return(
     <RectButton {...rest}>
       <LinearGradient
-      style={styles.container}
-      colors={[secondary50, secondary70]}
-    >
+        style={styles.container}
+        colors={[secondary50, secondary70]}
+      >
+        <View style={[styles.content, { opacity: checked ? 1 : 0.4}]}>
+          <View style={
+            checked ? styles.checked : styles.check
+          }/>
 
-    </LinearGradient>
+          <Icon 
+            width={48} 
+            height={48}
+          />
 
+          <Text style={styles.title}>
+            { title }
+          </Text>
+        </View>
+      </LinearGradient>
     </RectButton>
       
   )

@@ -21,7 +21,6 @@ export default function App() {
   if(!fontsLoaded){
    return <AppLoading />
   }
-  //aula ate 01:00:00
   return (
     <Background>
       <StatusBar 
