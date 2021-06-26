@@ -11,9 +11,11 @@ import { ButtonAdd } from '../../components/ButtonAdd';
 import { Profile } from '../../components/Profile';
 
 import { styles } from './styles';
+import { useAuth } from '../../hooks/auth';
 
 export function Home() {
   const [category, setCategory] = useState('');
+  const { user } = useAuth();
 
   const navigation = useNavigation();
 
