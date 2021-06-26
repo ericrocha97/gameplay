@@ -30,10 +30,8 @@ export function Guild({data, ...rest}: Props){
       activeOpacity={0.7}
       {...rest}
     >
-      <View style={styles.geral}>
-        <View style={{marginBottom: 20}}>
-          <GuildIcon />
-        </View>
+        {/* <GuildIcon guildId={data.id} iconId={data.icon} /> */}
+        <GuildIcon />
 
         <View style={styles.content}>
           <View>
@@ -50,10 +48,8 @@ export function Guild({data, ...rest}: Props){
         <Feather 
           name="chevron-right"
           color={theme.colors.heading}
-          size={24} 
-          style={{marginBottom: 20}}       
+          size={24}        
         />
-        </View>
     </TouchableOpacity>
   );
 }

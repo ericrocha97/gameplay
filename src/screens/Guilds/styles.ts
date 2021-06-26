@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,13 +8,5 @@ export const styles = StyleSheet.create({
   },
   guilds:{
     width: '100%',
-  },
-  dividerTop: {
-    width: '75%',
-    height: 1,
-    backgroundColor: theme.colors.secondary40,
-    marginTop: 2,
-    marginBottom: 24,
-    alignSelf: 'flex-end'
   }
 });

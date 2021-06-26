@@ -17,9 +17,8 @@ import { ListDivider } from '../../components/ListDivider';
 import { Background } from '../../components/Background';
 import { ListHeader } from '../../components/ListHeader';
 import { ButtonIcon } from '../../components/ButtonIcon';
-import { Header } from '../../components/Header';
 import { Member } from '../../components/Member';
-
+import { Header } from '../../components/Header';
 
 export function AppointmentDetails(){
   const members = [
@@ -56,6 +55,7 @@ export function AppointmentDetails(){
           </BorderlessButton>
         }
       />
+
       <ImageBackground 
         source={BannerImg}
         style={styles.banner}
@@ -70,22 +70,25 @@ export function AppointmentDetails(){
           </Text>
         </View>
       </ImageBackground>
+
       <ListHeader 
         title="Jogadores"
         subtitle="Total 3"
       />
+
       <FlatList 
         data={members}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
           <Member data={item} />
         )}
-        ItemSeparatorComponent={() => <View style={styles.dividerBottom} />}
+        ItemSeparatorComponent={() => <ListDivider isDetails />}
         style={styles.members}
       />
+
       <View style={styles.footer}>
         <ButtonIcon title="Entrar na partida" />
       </View>
     </Background>
-  )
+  );
 }

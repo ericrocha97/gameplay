@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
   banner: {
     width: '100%',
     height: 234,
-    marginBottom: 30
   },
   bannerContent: {
     flex: 1,
@@ -20,12 +19,13 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontFamily: theme.fonts.title700,
-    color: theme.colors.heading,
+    color: theme.colors.heading
   },
   subtitle: {
     fontSize: 13,
     fontFamily: theme.fonts.text400,
-    color: theme.colors.heading
+    color: theme.colors.heading,
+    lineHeight: 21
   },
   members: {
     marginLeft: 24,
@@ -35,13 +35,5 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 20,
     marginBottom: Platform.OS === 'ios' ? getBottomSpace() : getBottomSpace() + 45,
-  },
-  dividerBottom: {
-    width: '83%',
-    height: 1,
-    backgroundColor: theme.colors.secondary40,
-    marginTop: 2,
-    marginVertical: 31,
-    alignSelf: 'flex-end'
   }
 });

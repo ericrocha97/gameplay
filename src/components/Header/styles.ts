@@ -11,11 +11,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 1, height: 3 },
-    shadowOpacity: 1,
-    shadowRadius: 10,
-    elevation: 15,
   },
   title: {
     flex: 1,
