@@ -3,32 +3,29 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 18
+    paddingHorizontal: 24,
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center'
   },
   title: {
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
     fontSize: 18,
-    lineHeight: 23,
-    marginBottom: 10
+    marginBottom: 11,
   },
-  nameStatus: {
+  type: {
     fontFamily: theme.fonts.text400,
     color: theme.colors.highlight,
     fontSize: 13,
-    lineHeight: 17
+    marginBottom: 24,
   },
-  status: {
+  geral: {
     flexDirection: 'row',
-    alignItems: 'center'
-  },
-  bulletStatus: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginRight: 9
+    alignItems: 'center',
+    width: '100%',
+    justifyContent: 'center',
+    flex: 1
   }
 });

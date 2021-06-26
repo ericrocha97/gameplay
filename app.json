@@ -1,38 +1,37 @@
 {
-  "expo": {
-    "name": "GamePlay",
-    "slug": "gameplay",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0A1033"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0A1033"
-      }
-      
-    },
-    "androidStatusBar":{
-      "barStyle": "light-content",
-      "backgroundColor": "#0A1033"
-    },
-    "androidNavigationBar":{
-      "barStyle": "light-content",
-      "backgroundColor": "#0A1033"
+    "expo": {
+        "name": "GamePlay",
+        "slug": "gameplay",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#0A1033"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#0A1033"
+            }
+        },
+        "androidStatusBar": {
+            "barStyle": "light-content",
+            "backgroundColor": "#0A1033"
+        },
+        "androidNavigationBar": {
+            "barStyle": "light-content",
+            "backgroundColor": "#0A1033"
+        }
     }
-  }
 }

@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontFamily: theme.fonts.title700,
-    color: theme.colors.heading
+    color: theme.colors.heading,
   },
   subtitle: {
     fontSize: 13,
@@ -34,6 +34,14 @@ export const styles = StyleSheet.create({
   footer: {
     paddingHorizontal: 24,
     paddingVertical: 20,
-    marginBottom: Platform.OS === 'ios' ? getBottomSpace() : getBottomSpace() + 15,
+    marginBottom: Platform.OS === 'ios' ? getBottomSpace() : getBottomSpace() + 45,
+  },
+  dividerBottom: {
+    width: '83%',
+    height: 1,
+    backgroundColor: theme.colors.secondary40,
+    marginTop: 2,
+    marginVertical: 31,
+    alignSelf: 'flex-end'
   }
 });

@@ -34,6 +34,12 @@ export function AppointmentDetails(){
       username: 'bhraiher',
       avatar_url: 'https://github.com/bhraiher.png',
       status: 'offline'
+    },
+    {
+      id: '3',
+      username: 'diego3g',
+      avatar_url: 'https://github.com/diego3g.png',
+      status: 'offline'
     }
   ]
   return (
@@ -66,7 +72,7 @@ export function AppointmentDetails(){
       </ImageBackground>
       <ListHeader 
         title="Jogadores"
-        subtitle="Total 2"
+        subtitle="Total 3"
       />
       <FlatList 
         data={members}
@@ -74,7 +80,7 @@ export function AppointmentDetails(){
         renderItem={({ item }) => (
           <Member data={item} />
         )}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ItemSeparatorComponent={() => <View style={styles.dividerBottom} />}
         style={styles.members}
       />
       <View style={styles.footer}>

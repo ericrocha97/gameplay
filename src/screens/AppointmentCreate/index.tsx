@@ -7,46 +7,52 @@ import {
   View,
   Platform,
   ScrollView,
-  KeyboardAvoidingView,
+  KeyboardAvoidingView
 } from 'react-native';
 
 import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
-//01:07:27
+
 import { CategorySelect } from '../../components/CategorySelect';
-// import { ModalView } from '../../components/ModalView';
-// import { SmallInput } from '../../components/SmallInput';
+import { ModalView } from '../../components/ModalView';
+import { SmallInput } from '../../components/SmallInput';
 import { GuildIcon } from '../../components/GuildIcon';
-// import { TextArea } from '../../components/TextArea';
-// import { GuildProps } from '../../components/Guild';
+import { TextArea } from '../../components/TextArea';
+import { GuildProps } from '../../components/Guild';
 import { Header } from '../../components/Header';
-// import { Button } from '../../components/Button';
-// import { Guilds } from '../Guilds';
+import { Button } from '../../components/Button';
+import { Guilds } from '../Guilds';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
 export function AppointmentCreate(){
   const [category, setCategory] = useState('');
-  const [openGuildsModa, setOpenGuildsModal] = useState(false);
-  // const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
+  const [openGuildsModal, setOpenGuildsModal] = useState(false);
+  const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
 
   function handleOpenGuilds(){
     setOpenGuildsModal(true);
   }
 
-  // function handleGuildSelect(guildSelect: GuildProps){
-  //   setGuild(guildSelect);
-  //   setOpenGuildsModal(false);
-  // }
+  function closeModal(){
+    setOpenGuildsModal(false);
+  }
+
+  function handleGuildSelect(guildSelect: GuildProps){
+    setGuild(guildSelect);
+    closeModal();
+  }
 
   return (
     <KeyboardAvoidingView 
       behavior={Platform.OS === 'ios' ? 'padding' : 'height' }
       style={styles.container}
     >
-      <ScrollView>  
-        <Header 
+      <Header 
           title="Agendar partida"
         />
+      <ScrollView>  
+        
 
         <Text style={[
           styles.label, 
@@ -65,17 +71,17 @@ export function AppointmentCreate(){
           <RectButton onPress={handleOpenGuilds}>
             <View style={styles.select}>
               {
-                // guild.icon 
-                // ? <GuildIcon /> 
-                // : <View style={styles.image} />
+                guild.icon 
+                ? <GuildIcon /> 
+                : <View style={styles.image} />
               }
 
               <View style={styles.selectBody}>
                 <Text style={styles.label}>
                   { 
-                    // guild.name 
-                    // ? guild.name 
-                    // : 'Selecione um servidor' 
+                    guild.name 
+                    ? guild.name 
+                    : 'Selecione um servidor' 
                   }
                 </Text>
               </View>
@@ -95,11 +101,16 @@ export function AppointmentCreate(){
               </Text>
 
               <View style={styles.column}>
-                {/* <SmallInput maxLength={2} /> */}
+                <SmallInput 
+                  maxLength={2} 
+                  returnKeyType="next"
+                />
                 <Text style={styles.divider}>
                   /
                 </Text>
-                {/* <SmallInput maxLength={2} /> */}
+                <SmallInput 
+                  maxLength={2} 
+                />
               </View>
             </View>
 
@@ -109,11 +120,11 @@ export function AppointmentCreate(){
               </Text>
 
               <View style={styles.column}>
-                {/* <SmallInput maxLength={2} /> */}
+                <SmallInput maxLength={2} />
                 <Text style={styles.divider}>
                   :
                 </Text>
-                {/* <SmallInput maxLength={2} /> */}
+                <SmallInput maxLength={2} />
               </View>
             </View>           
           </View>
@@ -128,22 +139,27 @@ export function AppointmentCreate(){
             </Text>
           </View>
 
-          {/* <TextArea 
+          <TextArea 
             multiline
             maxLength={100}
             numberOfLines={5}
             autoCorrect={false}
-          /> */}
+          />
 
           <View style={styles.footer}>
-            {/* <Button title="Agendar" /> */}
+            <Button title="Agendar" />
           </View>
         </View>
       </ScrollView>
 
-      {/* <ModalView visible={openGuildsModa}>
+      <ModalView 
+        visible={openGuildsModal} 
+        onRequestClose={() => closeModal()}
+        onDismiss={() => closeModal()}
+        setState={() => closeModal()}
+      >
         <Guilds handleGuildSelect={handleGuildSelect}/>
-      </ModalView> */}
+      </ModalView>
     </KeyboardAvoidingView>
   );
 }
