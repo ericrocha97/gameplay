@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 18
+    // marginBottom: 14
   },
   title: {
     fontFamily: theme.fonts.title700,

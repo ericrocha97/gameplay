@@ -29,11 +29,18 @@ export const styles = StyleSheet.create({
   },
   members: {
     marginLeft: 24,
-    marginTop: 27
+    marginTop: 27,
   },
   footer: {
     paddingHorizontal: 24,
     paddingVertical: 20,
     marginBottom: Platform.OS === 'ios' ? getBottomSpace() : getBottomSpace() + 45,
+  },
+  emptyContainer: {
+    alignItems: 'center',
+  },
+  emptyText: {
+    fontFamily: theme.fonts.text500,
+    color: theme.colors.heading
   }
 });

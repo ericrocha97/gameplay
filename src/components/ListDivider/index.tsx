@@ -5,26 +5,21 @@ import { styles } from './styles';
 
 type Props = {
   isCentered?: boolean;
-  isDetails?: boolean;
+  width: string; 
 }
 
-export function ListDivider({ isCentered, isDetails }: Props){
+export function ListDivider({ isCentered, width }: Props){
   return (
     <View 
       style={[
         styles.container,
         isCentered ? {
-          marginVertical: 12,
-          width: '75%'
+          marginVertical: 14,
         } : {
           marginTop: 2,
           marginBottom: 31,
-          width: '78%',
-        },
-        isDetails ? {
-          width: '83%',
-        } : {
-
+        },{
+          width
         }
       ]}
     />
